@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Financiera - Gorras Dann's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Calculadora Financiera</h1>
+    <a href="index.html" class="btn">Volver al Inicio</a>
+</header>
+
+<div class="container">
+
+    <!-- CONVERSION DE TASAS -->
+    <section>
+        <h2>CONVERISON DE TASAS</h2>
+        <label>Tasa Nominal (%)</label>
+        <input type="number" id="tasaNominal">
+        <label>Periodos por año</label>
+        <input type="number" id="periodos">
+        <button onclick="convertirTasa()">Convertir</button>
+        <p id="resultadoTasa"></p>
+    </section>
+
+    <!-- VALOR DEL DINERO -->
+    <section>
+        <h2>Valor del Dinero en el Tiempo</h2>
+        <label>Valor Presente (COP)</label>
+        <input type="number" id="vp">
+        <label>Tasa (%)</label>
+        <input type="number" id="tasa">
+        <label>Periodos</label>
+        <input type="number" id="n">
+        <button onclick="calcularVF()">Calcular Valor Futuro</button>
+        <p id="resultadoVF"></p>
+    </section>
+
+    <!-- AMORTIZACIÓN -->
+    <section>
+        <h2>TABLA DE AMORTIZACION</h2>
+        <label>Prestamo (COP)</label>
+        <input type="number" id="prestamo">
+        <label>Tasa (%)</label>
+        <input type="number" id="tasaAmort">
+        <label>Periodos</label>
+        <input type="number" id="periodosAmort">
+        <button onclick="amortizacionConstante()">Cuota Constante</button>
+        <button onclick="amortizacionDecreciente()">Cuota Decreciente</button>
+        <div id="tablaAmort"></div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
